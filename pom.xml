@@ -45,8 +45,9 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.2</version>
                 <configuration>
-                    <imageName>microservice-app</imageName><!--[a-z 0-9] 不然docker:build会报错-->
+                    <imageName>xiaoka/ms-app:1.0</imageName><!--[a-z 0-9] 不然docker:build会报错-->
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
+                    <dockerHost>registry.cn-hangzhou.aliyuncs.com/code_repository/apps</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
