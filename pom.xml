@@ -11,7 +11,7 @@
     <properties>
         <maven.compiler.source>8</maven.compiler.source>
         <maven.compiler.target>8</maven.compiler.target>
-        <docker.repostory>registry-vpc.cn-hangzhou.aliyuncs.com</docker.repostory>
+        <docker.repostory>registry.cn-hangzhou.aliyuncs.com</docker.repostory>
     </properties>
 
     <parent>
@@ -46,9 +46,8 @@
                 <artifactId>docker-maven-plugin</artifactId>
                 <version>1.2.2</version>
                 <configuration>
-                    <imageName>xiaoka/ms-app:1.0</imageName><!--[a-z 0-9] 不然docker:build会报错-->
+                    <imageName>${docker.repostory}/xiaokas/ms-app:1.0</imageName><!--[a-z 0-9] 不然docker:build会报错-->
                     <dockerDirectory>${project.basedir}/src/main/docker</dockerDirectory>
-                    <dockerHost>registry.cn-hangzhou.aliyuncs.com/code_repository/apps</dockerHost>
                     <resources>
                         <resource>
                             <targetPath>/</targetPath>
