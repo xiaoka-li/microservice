@@ -1,0 +1,9 @@
+server:
+  port: 8081
+spring:
+  application:
+    name: ms
+  security:
+    user:
+      name: xiaoka
+      password: xiaoka
